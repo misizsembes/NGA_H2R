@@ -14,7 +14,7 @@ AGGREGATED_SETTLEMENT_DATASET <- paste0(FOLDER_AGGREGATED,settment_merge , ".csv
 
 #TIMEFRAME: "month" OR "window"
 timeframe <- "month"
-
+#########################################################################
 #files we write
 if(timeframe=="window"){
   adjusted_many_months_name <- gsub("Settlements_Merged", "Global_Results", settment_merge)

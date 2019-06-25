@@ -9,14 +9,10 @@ gis_data_sheet <-  "Feuil1"
 
 #FOLDER WHERE KOBO OUTPUT IS LOCATED WITHIN PARENT FOLDER
 folder_with_kobo <- "Nov_May"
-folder_with_kobo <- paste0(folder_with_kobo,"/")   #DON'T TOUCH
 
 #KOBO FILE TO OPEN--"CLEANED" DATASET
 CLEANED_DATASET <- "H2R_Clean_Dataset_Nov18_May19"
 cleaned_excel_sheet_name = "Sheet1"  #IGNORE If THE FILE IS A CSV
-
-#CLEAN NAME --- DO NOT TOUCH
-adjusted_all_months_name <- gsub("Clean_Dataset", "Settlements_Merged", CLEANED_DATASET)
 
 #DATA YEAR: DOES NOT MATTER IF "ALL" MONTHS ARE AGGREGATED 
 #2018 = "18"; 2021 = "21" etc... (text)
@@ -127,6 +123,12 @@ library(car)
 
 if (!require(readr)) install.packages('readr')
 library(readr)
+
+#FOLDER WHERE THE CLEANED KOBO OUTPUT IS STORED
+folder_with_kobo <- paste0(folder_with_kobo,"/")   #DON'T TOUCH
+
+#DATA OF CLEANED NAMES --- DO NOT TOUCH
+adjusted_all_months_name <- gsub("Clean_Dataset", "Settlements_Merged", CLEANED_DATASET)
 
 #FILE NAMES BASED ON MONTH
 if(month_choose =="11"){

@@ -1,7 +1,7 @@
 #PARENT FOLDER
 parent_folder <- "~/Desktop/Nigeria/Hard_to_reach/New_Organization/MayFactsheet"
 #SETTLEMENT PATH
-settlement_working_directory <- paste0(parent_folder,"/","Settlements_Merged")
+settlement_working_directory <- paste0(parent_folder,"/","Settlements_Merged")  #DO NOT TOUCH
 #H2R EXCEL SHEET--NAME OF SETTLEMENT MERGED FILE
 h2r_csv <- "H2R_Settlements_Merged_Month_May19"
 h2r_cleaned_data <- read_csv(paste0(settlement_working_directory,"/",h2r_csv,".csv"))
@@ -18,7 +18,7 @@ threshold <- 0.05  # % OF SETTLEMENTS THRESHOLD
 
  #"ALL"; otherwise "01" to "12" (characters)
  month_choose <- "05"
- 
+ ##############################################################################
  #WARD FILE NAMES
  if(month_choose !="ALL"){
    ###EXTRACT X CHARACTERS FROM THE RIGHT                      
@@ -46,8 +46,6 @@ threshold <- 0.05  # % OF SETTLEMENTS THRESHOLD
    global_named_dataset <- gsub("Settlements_Merged", "GLOBAL_Results", h2r_csv)
  } else{ global_named_dataset <- "NO_NAME"
  }
- 
- 
 #####LOAD PACKAGES#####
 if (!require(readxl)) install.packages('readxl')
 library(readxl)
